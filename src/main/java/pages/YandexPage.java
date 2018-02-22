@@ -1,16 +1,27 @@
 package pages;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * Created by zemlyanova on 19.02.2018.
  */
 public class YandexPage {
+
+    public YandexPage(WebDriver driver) {
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
+    }
+
+    public WebDriver driver;
+
     @FindBy(xpath = "//*[@class='input__control input__input']")
     private WebElement searchField;
 
-    @FindBy(xpath = "//*[@class='search2__button']")
+    @FindBy(css = ".search2__button")
     private WebElement searchButton;
 
     @FindBy(xpath = "(//*[@class='organic__title-wrapper typo typo_text_l typo_line_m'])[1]")
@@ -37,6 +48,17 @@ public class YandexPage {
     @FindBy(xpath = "//*[@class='options__header']")
     private WebElement switchLanguageResult;
 
+    @FindBy(css = ".input__control")
+    private WebElement searchInput;
+
+    private By productCount = By.cssSelector("div[data-id]");
+
+    private By priceLink = By.cssSelector(".n-filter-sorter.i-bem.n-filter-sorter_js_inited:nth-child(3)");
+
+    private By ascendingFilter = By.cssSelector(".n-filter-sorter.i-bem.n-filter-sorter_js_inited.n-filter-sorter_sort_asc.n-filter-sorter_state_select");
+
+    private By descendingFilter = By.cssSelector(".n-filter-sorter.i-bem.n-filter-sorter_js_inited.n-filter-sorter_sort_desc.n-filter-sorter_state_select");
+
     public void searchWeather(String text){
         searchField.sendKeys(text);
         searchButton.click();
@@ -59,5 +81,21 @@ public class YandexPage {
 
     public String getSwitchLanguageResult(){
         return switchLanguageResult.getText();
+    }
+
+    public int searchProductAndGetProductCount(String text){
+        searchInput.sendKeys(text);
+        searchButton.click();
+        return driver.findElements(productCount).size();
+    }
+
+    public String clickPriceLinkAndGetResultInAscending(){
+        driver.findElement(priceLink).click();
+        return driver.findElement(ascendingFilter).getAttribute("class");
+    }
+
+    public String clickPriceLinkAndGetResultInDescending(){
+        driver.findElement(priceLink).click();
+        return driver.findElement(descendingFilter).getAttribute("class");
     }
 }

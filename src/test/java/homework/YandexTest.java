@@ -31,4 +31,12 @@ public class YandexTest extends BaseTest{
         yandexPage.switchLanguage();
         Assert.assertEquals("Search settings", yandexPage.getSwitchLanguageResult());
     }
+
+    @Test
+    public void search_for_product_in_the_market_yandex(){
+        driver.get("https://market.yandex.ru");
+        Assert.assertEquals(12, yandexPage.searchProductAndGetProductCount("Планшет"));
+        Assert.assertTrue("Товары отсортированы не по возрастанию", yandexPage.clickPriceLinkAndGetResultInAscending().contains("asc"));
+        Assert.assertTrue("Товары отсортированы не по убыванию", yandexPage.clickPriceLinkAndGetResultInDescending().contains("desc"));
+    }
 }
