@@ -89,6 +89,15 @@ public class YandexPage {
         return driver.findElements(productCount).size();
     }
 
+    public void enterNameProductAndSearch(String text){
+        searchInput.sendKeys(text);
+        searchButton.click();
+    }
+
+    public int getProductCount(String text){
+        return driver.findElements(productCount).size();
+    }
+
     public String clickPriceLinkAndGetResultInAscending(){
         driver.findElement(priceLink).click();
         return driver.findElement(ascendingFilter).getAttribute("class");

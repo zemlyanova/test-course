@@ -10,12 +10,12 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by zemlyanova on 19.02.2018.
  */
-public class BaseTest {
+public class BaseTest{
     protected static WebDriver driver;
 
     @BeforeClass
     public static void setup() {
-        System.setProperty("webdriver.chrome.driver", "C:/chromedriver/2.34/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
