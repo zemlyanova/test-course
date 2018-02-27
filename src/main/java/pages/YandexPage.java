@@ -83,28 +83,28 @@ public class YandexPage {
         return switchLanguageResult.getText();
     }
 
-    public int searchProductAndGetProductCount(String text){
-        searchInput.sendKeys(text);
-        searchButton.click();
-        return driver.findElements(productCount).size();
-    }
-
     public void enterNameProductAndSearch(String text){
         searchInput.sendKeys(text);
         searchButton.click();
     }
 
-    public int getProductCount(String text){
+    public int getProductCount(){
         return driver.findElements(productCount).size();
     }
 
-    public String clickPriceLinkAndGetResultInAscending(){
+    public void clickPriceLink(){
         driver.findElement(priceLink).click();
+    }
+
+    public String getResultByAscending(){
         return driver.findElement(ascendingFilter).getAttribute("class");
     }
 
-    public String clickPriceLinkAndGetResultInDescending(){
-        driver.findElement(priceLink).click();
+    public String getResultByDescending(String index){
+        if (driver.findElement(ascendingFilter).getAttribute("class").contains(index))
+        {
+            driver.findElement(priceLink).click();
+        }
         return driver.findElement(descendingFilter).getAttribute("class");
     }
 }

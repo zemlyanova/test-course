@@ -34,21 +34,27 @@ public class YandexTest extends BaseTest{
         Assert.assertEquals("Search settings", yandexPage.getSwitchLanguageResult());
     }
 
-/*    @Test
-    public void search_for_product_in_the_market_yandex(){
-        driver.get("https://market.yandex.ru");
-        Assert.assertEquals(12, yandexPage.searchProductAndGetProductCount("Планшет"));
-        Assert.assertTrue("Товары отсортированы не по возрастанию", yandexPage.clickPriceLinkAndGetResultInAscending().contains("asc"));
-        Assert.assertTrue("Товары отсортированы не по убыванию", yandexPage.clickPriceLinkAndGetResultInDescending().contains("desc"));
-    }*/
-
     @Test
     public void search_for_product_in_the_market_yandex_and_check_product_count(){
         int productCount = 12;
         driver.get("https://market.yandex.ru");
         yandexPage.enterNameProductAndSearch("Планшет");
-        assertThat(yandexPage.getProductCount("Планшет")).describedAs("На странице отображается НЕ 12 товаров").isEqualTo(productCount);
+        assertThat(yandexPage.getProductCount()).describedAs("На странице отображается НЕ 12 товаров").isEqualTo(productCount);
     }
 
+    @Test
+    public void check_sorting_product_by_ascending(){
+        driver.get("https://market.yandex.ru");
+        yandexPage.enterNameProductAndSearch("Планшет");
+        yandexPage.clickPriceLink();
+        Assert.assertTrue("Товары отсортированы не по возрастанию", yandexPage.getResultByAscending().contains("asc"));
+    }
 
+    @Test
+    public void check_sorting_product_by_descending(){
+        driver.get("https://market.yandex.ru");
+        yandexPage.enterNameProductAndSearch("Планшет");
+        yandexPage.clickPriceLink();
+        Assert.assertTrue("Товары отсортированы не по убыванию", yandexPage.getResultByDescending("asc").contains("desc"));
+    }
 }
