@@ -1,9 +1,2 @@
 language: java
-install: mvn install
 
-addons:
-  apt:
-    sources:
-      - google-chrome
-packages:
-      - google-chrome-stable
