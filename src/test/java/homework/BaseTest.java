@@ -1,5 +1,6 @@
 package homework;
 
+import net.serenitybdd.core.pages.PageObject;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by zemlyanova on 19.02.2018.
  */
-public class BaseTest{
+public class BaseTest extends PageObject{
     protected static WebDriver driver;
 
     @BeforeClass

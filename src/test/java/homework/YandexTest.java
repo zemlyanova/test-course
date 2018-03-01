@@ -1,12 +1,13 @@
 package homework;
 
-import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.support.PageFactory;
 import pages.YandexPage;
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by zemlyanova on 19.02.2018.
@@ -24,14 +25,14 @@ public class YandexTest extends BaseTest{
     public void weather_search(){
         driver.get("https://ya.ru/");
         yandexPage.searchWeather("погода пенза");
-        Assert.assertEquals("Погода в Пензе", yandexPage.getSearchResult());
+        assertEquals("Погода в Пензе", yandexPage.getSearchResult());
     }
 
     @Test
     public void checking_the_language_selection() {
         driver.get("http://yandex.ru");
         yandexPage.switchLanguage();
-        Assert.assertEquals("Search settings", yandexPage.getSwitchLanguageResult());
+        assertEquals("Search settings", yandexPage.getSwitchLanguageResult());
     }
 
     @Test
@@ -47,7 +48,8 @@ public class YandexTest extends BaseTest{
         driver.get("https://market.yandex.ru");
         yandexPage.enterNameProductAndSearch("Планшет");
         yandexPage.clickPriceLink();
-        Assert.assertTrue("Товары отсортированы не по возрастанию", yandexPage.getResultByAscending().contains("asc"));
+        assertTrue("Значок сортировки отображается не верно - НЕ по возрастанию", yandexPage.getResultByAscending().contains("asc"));
+        assertThat(yandexPage.returnSortingIndex()).describedAs("Товары отсортированы НЕ по возрастанию").isEqualTo("asc");
     }
 
     @Test
@@ -55,6 +57,7 @@ public class YandexTest extends BaseTest{
         driver.get("https://market.yandex.ru");
         yandexPage.enterNameProductAndSearch("Планшет");
         yandexPage.clickPriceLink();
-        Assert.assertTrue("Товары отсортированы не по убыванию", yandexPage.getResultByDescending("asc").contains("desc"));
+        assertTrue("Значок сортировки отображается не верно - НЕ по убыванию", yandexPage.getResultByDescending("asc").contains("desc"));
+        assertThat(yandexPage.returnSortingIndex()).describedAs("Товары отсортированы НЕ по убыванию").isEqualTo("desc");
     }
 }

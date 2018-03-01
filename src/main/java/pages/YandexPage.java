@@ -1,22 +1,24 @@
 package pages;
 
+import net.serenitybdd.core.pages.PageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 /**
  * Created by zemlyanova on 19.02.2018.
  */
-public class YandexPage {
+public class YandexPage extends PageObject {
 
     public YandexPage(WebDriver driver) {
-        PageFactory.initElements(driver, this);
+        super(driver);
         this.driver = driver;
     }
 
-    public WebDriver driver;
+    private final WebDriver driver;
 
     @FindBy(xpath = "//*[@class='input__control input__input']")
     private WebElement searchField;
@@ -59,6 +61,8 @@ public class YandexPage {
 
     private By descendingFilter = By.cssSelector(".n-filter-sorter.i-bem.n-filter-sorter_js_inited.n-filter-sorter_sort_desc.n-filter-sorter_state_select");
 
+    private By price = By.cssSelector(".n-snippet-card2__main-price");
+
     public void searchWeather(String text){
         searchField.sendKeys(text);
         searchButton.click();
@@ -97,6 +101,7 @@ public class YandexPage {
     }
 
     public String getResultByAscending(){
+        waitABit(2000);
         return driver.findElement(ascendingFilter).getAttribute("class");
     }
 
@@ -105,6 +110,43 @@ public class YandexPage {
         {
             driver.findElement(priceLink).click();
         }
+        waitABit(2000);
         return driver.findElement(descendingFilter).getAttribute("class");
+    }
+
+    public String returnSortingIndex() {
+        String sortingIndex = null;
+        String firstPrice = driver.findElements(price).get(0).getText().replace("\u20BD", "").replace(" ", "");
+        if (Integer.parseInt(firstPrice) == maxPrice()) {
+            sortingIndex = "desc";
+        }
+        else if (Integer.parseInt(firstPrice) == minPrice()) {
+            sortingIndex = "asc";
+        }
+        return sortingIndex;
+    }
+
+    private int maxPrice() {
+        List<WebElement> prices = driver.findElements(price);
+        int max = Integer.parseInt(prices.get(0).getText().replace("\u20BD", "").replace(" ", ""));
+        for (int i = 0; i < prices.size(); i++) {
+            int price = Integer.parseInt(prices.get(i).getText().replace("\u20BD", "").replace(" ", ""));
+            if (max < price) {
+                max = price;
+            }
+        }
+        return max;
+    }
+
+    private int minPrice() {
+        List<WebElement> prices = driver.findElements(price);
+        int min = Integer.parseInt(prices.get(0).getText().replace("\u20BD", "").replace(" ", ""));
+        for (int i = 0; i < prices.size(); i++) {
+            int price = Integer.parseInt(prices.get(i).getText().replace("\u20BD", "").replace(" ", ""));
+            if (min > price) {
+                min = price;
+            }
+        }
+        return min;
     }
 }
