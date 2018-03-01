@@ -1,5 +1,9 @@
 language: java
+
+install: mvn install
+
 dist: trusty
+
 addons:
   apt:
     sources:
