@@ -1,5 +1,7 @@
 language: java
-dist: trusty
+dist: trusty     
+mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+mvn test -B
 
 addons:
   apt:
@@ -7,6 +9,6 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
-
+      
 mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 mvn test -B
