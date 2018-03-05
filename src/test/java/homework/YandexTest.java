@@ -37,7 +37,7 @@ public class YandexTest extends BaseTest{
 
     @Test
     public void search_for_product_in_the_market_yandex_and_check_product_count(){
-        int productCount = 12;
+        int productCount = 48;
         driver.get("https://market.yandex.ru");
         yandexPage.enterNameProductAndSearch("Планшет");
         assertThat(yandexPage.getProductCount()).describedAs("На странице отображается НЕ 12 товаров").isEqualTo(productCount);
