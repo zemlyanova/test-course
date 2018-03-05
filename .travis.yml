@@ -1,6 +1,6 @@
 language: java
 dist: trusty     
-install: mvn install
+install: true
 
 addons:
   apt:
