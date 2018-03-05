@@ -1,5 +1,5 @@
 language: java
-sudo: false
+dist: trusty
 
 addons:
   apt:
@@ -7,6 +7,3 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
-
-install: mvn install
-script: mvn -test -B
