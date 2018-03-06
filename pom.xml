@@ -16,7 +16,7 @@
             --user-data-dir=C:\\Chrome\\User Data\\${chrome.version}, --safebrowsing-disable-download-protection,
             --profile.default_content_setting_values.automatic_downloads=1</chrome.switches>
         <chrome.version>63.0.3239.108</chrome.version>
-        <chromedriver.version>2.34</chromedriver.version>
+        <chromedriver.version>2.35</chromedriver.version>
         <webdriver.chrome.driver>c:\\chromedriver\\${chromedriver.version}\\chromedriver.exe</webdriver.chrome.driver>
         <serenity.version>1.8.10</serenity.version>
         <selenium.version>3.8.1</selenium.version>
