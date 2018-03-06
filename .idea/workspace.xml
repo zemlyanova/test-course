@@ -41,8 +41,8 @@
       <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="476">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -711,12 +711,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 11h 38m 21s.xml">
-      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 11h 40m 13s.xml">
-      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 11h 40m 39s.xml">
       <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
     </history-entry>
@@ -739,6 +733,12 @@
       <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
     </history-entry>
     <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 12h 29m 22s.xml">
+      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 12h 40m 34s.xml">
+      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 12h 45m 35s.xml">
       <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1134,8 +1134,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="476">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
