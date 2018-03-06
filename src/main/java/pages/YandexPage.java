@@ -20,6 +20,8 @@ public class YandexPage extends PageObject {
 
     private final WebDriver driver;
 
+    String symbol = "\u20BD";
+
     @FindBy(xpath = "//*[@class='input__control input__input']")
     private WebElement searchField;
 
@@ -116,7 +118,7 @@ public class YandexPage extends PageObject {
 
     public String returnSortingFilter() {
         String sortingFilter = null;
-        String firstPrice = driver.findElements(price).get(0).getText().replace("\u20BD", "").replace(" ", "");
+        String firstPrice = driver.findElements(price).get(0).getText().replace(symbol, "").replace(" ", "");
         if (Integer.parseInt(firstPrice) == maxPrice()) {
             sortingFilter = "desc";
         }
@@ -128,9 +130,9 @@ public class YandexPage extends PageObject {
 
     private int maxPrice() {
         List<WebElement> prices = driver.findElements(price);
-        int max = Integer.parseInt(prices.get(0).getText().replace("\u20BD", "").replace(" ", ""));
+        int max = Integer.parseInt(prices.get(0).getText().replace(symbol, "").replace(" ", ""));
         for (int i = 0; i < prices.size(); i++) {
-            int price = Integer.parseInt(prices.get(i).getText().replace("\u20BD", "").replace(" ", ""));
+            int price = Integer.parseInt(prices.get(i).getText().replace(symbol, "").replace(" ", ""));
             if (max < price) {
                 max = price;
             }
@@ -140,9 +142,9 @@ public class YandexPage extends PageObject {
 
     private int minPrice() {
         List<WebElement> prices = driver.findElements(price);
-        int min = Integer.parseInt(prices.get(0).getText().replace("\u20BD", "").replace(" ", ""));
+        int min = Integer.parseInt(prices.get(0).getText().replace(symbol, "").replace(" ", ""));
         for (int i = 0; i < prices.size(); i++) {
-            int price = Integer.parseInt(prices.get(i).getText().replace("\u20BD", "").replace(" ", ""));
+            int price = Integer.parseInt(prices.get(i).getText().replace(symbol, "").replace(" ", ""));
             if (min > price) {
                 min = price;
             }
