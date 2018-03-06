@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3790c233-d113-4ec7-957c-e24ded5966bb" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pages/YandexPage.class" afterPath="$PROJECT_DIR$/target/classes/pages/YandexPage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/homework/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/BaseTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pages/YandexPage.java" afterPath="$PROJECT_DIR$/src/main/java/pages/YandexPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/homework/YandexTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/YandexTest.java" />
     </list>
     <ignored path="test-course.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,21 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="YandexTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="YandexTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework/YandexTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="717">
-              <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+            <state relative-caret-position="768">
+              <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="364">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1044#1045#0" expanded="true" />
@@ -55,8 +57,8 @@
       <file leaf-file-name="YandexPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/YandexPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+            <state relative-caret-position="391">
+              <caret line="130" column="99" selection-start-line="130" selection-start-column="99" selection-end-line="130" selection-end-column="99" />
               <folding />
             </state>
           </provider>
@@ -86,9 +88,9 @@
         <option value="$PROJECT_DIR$/src/main/java/pages/BasePage.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/SearchPage.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/homework/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/YandexPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/homework/YandexTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/homework/BaseTest.java" />
       </list>
     </option>
   </component>
@@ -713,9 +715,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 11h 32m 09s.xml">
-      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 11h 38m 08s.xml">
       <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
     </history-entry>
@@ -740,8 +739,11 @@
     <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 11h 42m 34s.xml">
       <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="YandexTest_search_for_product_in_the_market_yandex_and_check_product_count - 2018.03.06 at 10h 55m 58s.xml">
-      <configuration name="YandexTest.search_for_product_in_the_market_yandex_and_check_product_count" configurationId="JUnit" />
+    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 11h 43m 03s.xml">
+      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 11h 47m 02s.xml">
+      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -764,7 +766,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30844155" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30844155" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23593074" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1122,31 +1124,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1044#1045#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/YandexPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="66" column="16" selection-start-line="66" selection-start-column="16" selection-end-line="66" selection-end-column="16" />
+        <state relative-caret-position="391">
+          <caret line="130" column="99" selection-start-line="130" selection-start-column="99" selection-end-line="130" selection-end-column="99" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/YandexTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="57" column="16" selection-start-line="57" selection-start-column="16" selection-end-line="57" selection-end-column="16" />
+        <state relative-caret-position="768">
+          <caret line="57" column="21" selection-start-line="57" selection-start-column="21" selection-end-line="57" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/homework/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1044#1045#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

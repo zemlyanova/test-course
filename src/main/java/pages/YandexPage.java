@@ -114,16 +114,16 @@ public class YandexPage extends PageObject {
         return driver.findElement(descendingFilter).getAttribute("class");
     }
 
-    public String returnSortingIndex() {
-        String sortingIndex = null;
+    public String returnSortingFilter() {
+        String sortingFilter = null;
         String firstPrice = driver.findElements(price).get(0).getText().replace("\u20BD", "").replace(" ", "");
         if (Integer.parseInt(firstPrice) == maxPrice()) {
-            sortingIndex = "desc";
+            sortingFilter = "desc";
         }
         else if (Integer.parseInt(firstPrice) == minPrice()) {
-            sortingIndex = "asc";
+            sortingFilter = "asc";
         }
-        return sortingIndex;
+        return sortingFilter;
     }
 
     private int maxPrice() {

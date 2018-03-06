@@ -49,7 +49,7 @@ public class YandexTest extends BaseTest{
         yandexPage.enterNameProductAndSearch("Планшет");
         yandexPage.clickPriceLink();
         assertTrue("Значок сортировки отображается не верно - НЕ по возрастанию", yandexPage.getResultByAscending().contains("asc"));
-        assertThat(yandexPage.returnSortingIndex()).describedAs("Товары отсортированы НЕ по возрастанию").isEqualTo("asc");
+        assertThat(yandexPage.returnSortingFilter()).describedAs("Товары отсортированы НЕ по возрастанию").isEqualTo("asc");
     }
 
     @Test
@@ -58,6 +58,6 @@ public class YandexTest extends BaseTest{
         yandexPage.enterNameProductAndSearch("Планшет");
         yandexPage.clickPriceLink();
         assertTrue("Значок сортировки отображается не верно - НЕ по убыванию", yandexPage.getResultByDescending("asc").contains("desc"));
-        assertThat(yandexPage.returnSortingIndex()).describedAs("Товары отсортированы НЕ по убыванию").isEqualTo("desc");
+        assertThat(yandexPage.returnSortingFilter()).describedAs("Товары отсортированы НЕ по убыванию").isEqualTo("desc");
     }
 }
