@@ -16,6 +16,11 @@ public class BaseTest extends PageObject{
 
     @BeforeClass
     public static void setup() {
+        if (System.getProperty("os.name").contains("Windows")) {
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        }
+        else System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
+
         //System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
         //driver.manage().window().maximize();
