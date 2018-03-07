@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3790c233-d113-4ec7-957c-e24ded5966bb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/homework/BaseTest.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/homework/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/java/homework/BaseTest.java" />
     </list>
@@ -32,8 +31,8 @@
       <file leaf-file-name="YandexTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework/YandexTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+            <state relative-caret-position="119">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -42,8 +41,8 @@
       <file leaf-file-name="BaseTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/homework/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+            <state relative-caret-position="408">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -712,12 +711,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 12h 54m 51s.xml">
-      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 13h 00m 28s.xml">
-      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.06 at 17h 53m 35s.xml">
       <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
     </history-entry>
@@ -740,6 +733,12 @@
       <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
     </history-entry>
     <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.07 at 11h 05m 55s.xml">
+      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.07 at 11h 10m 31s.xml">
+      <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="YandexTest_check_sorting_product_by_descending - 2018.03.07 at 11h 15m 16s.xml">
       <configuration name="YandexTest.check_sorting_product_by_descending" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -1127,16 +1126,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/YandexTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="58" column="36" selection-start-line="58" selection-start-column="36" selection-end-line="58" selection-end-column="36" />
+        <state relative-caret-position="119">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/homework/BaseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="32" column="1" selection-start-line="32" selection-start-column="1" selection-end-line="32" selection-end-column="1" />
+        <state relative-caret-position="408">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
