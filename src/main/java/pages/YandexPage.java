@@ -20,7 +20,7 @@ public class YandexPage extends PageObject {
 
     private final WebDriver driver;
 
-    String symbol = "\u20BD";
+    String symbol = "[^\\d]";
 
     @FindBy(xpath = "//*[@class='input__control input__input']")
     private WebElement searchField;
@@ -118,7 +118,7 @@ public class YandexPage extends PageObject {
 
     public String returnSortingFilter() {
         String sortingFilter = null;
-        String firstPrice = driver.findElements(price).get(0).getText().replace(symbol, "").replace(" ", "");
+        String firstPrice = element(price).getText().replaceAll(symbol, "");
         if (Integer.parseInt(firstPrice) == maxPrice()) {
             sortingFilter = "desc";
         }
@@ -130,9 +130,9 @@ public class YandexPage extends PageObject {
 
     private int maxPrice() {
         List<WebElement> prices = driver.findElements(price);
-        int max = Integer.parseInt(prices.get(0).getText().replace(symbol, "").replace(" ", ""));
+        int max = Integer.parseInt(prices.get(0).getText().replaceAll(symbol, ""));
         for (int i = 0; i < prices.size(); i++) {
-            int price = Integer.parseInt(prices.get(i).getText().replace(symbol, "").replace(" ", ""));
+            int price = Integer.parseInt(prices.get(i).getText().replaceAll(symbol, ""));
             if (max < price) {
                 max = price;
             }
@@ -142,9 +142,9 @@ public class YandexPage extends PageObject {
 
     private int minPrice() {
         List<WebElement> prices = driver.findElements(price);
-        int min = Integer.parseInt(prices.get(0).getText().replace(symbol, "").replace(" ", ""));
+        int min = Integer.parseInt(prices.get(0).getText().replaceAll(symbol, ""));
         for (int i = 0; i < prices.size(); i++) {
-            int price = Integer.parseInt(prices.get(i).getText().replace(symbol, "").replace(" ", ""));
+            int price = Integer.parseInt(prices.get(i).getText().replaceAll(symbol, ""));
             if (min > price) {
                 min = price;
             }

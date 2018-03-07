@@ -12,12 +12,12 @@ import static org.junit.Assert.assertTrue;
 /**
  * Created by zemlyanova on 19.02.2018.
  */
-public class YandexTest extends BaseTest{
+public class YandexTest extends BaseTest {
 
     private static YandexPage yandexPage;
 
     @BeforeClass
-    public static void beforeTest() throws InterruptedException {
+    public static void beforeTest() throws InterruptedException{
         yandexPage = PageFactory.initElements(driver, YandexPage.class);
     }
 
@@ -29,7 +29,7 @@ public class YandexTest extends BaseTest{
     }
 
     @Test
-    public void checking_the_language_selection() {
+    public void checking_the_language_selection(){
         driver.get("http://yandex.ru");
         yandexPage.switchLanguage();
         assertEquals("Search settings", yandexPage.getSwitchLanguageResult());
