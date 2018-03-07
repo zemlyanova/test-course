@@ -16,14 +16,14 @@ public class BaseTest extends PageObject{
 
     @BeforeClass
     public static void setup() {
-/*        if (System.getProperty("os.name").contains("Windows")) {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        if (System.getProperty("os.name").contains("Windows")) {
+            System.setProperty("webdriver.chrome.driver", ".\\chromedriver.exe");
         }
-        else System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");*/
+        else System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 
-        //System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+      //  System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
         driver = new ChromeDriver();
-        //driver.manage().window().maximize();
+      //  driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
